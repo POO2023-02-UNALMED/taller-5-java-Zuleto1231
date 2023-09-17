@@ -13,12 +13,11 @@ public class Animal {
 	
 //constructor
 	
-public Animal(String nombre,int edad, String habitat,String genero,Zona zona) {
+public Animal(String nombre,int edad, String habitat,String genero) {
 	this.nombre=nombre;
 	this.edad=edad;
 	this.habitat=habitat;
 	this.genero=genero;
-	this.zona=zona;
 	Animal.totalAnimales++;
 }
 //constructor vacio
@@ -70,7 +69,7 @@ public String movimiento() {
 	
 
 	
-	public String totalPorTipo() {
+	public static String totalPorTipo() {
 		return "Mamiferos:"+Mamifero.getListado().size()+
 				"\nAves:"+ Ave.getListado().size()+
 		"\nReptiles:"+ Reptil.getListado().size()+

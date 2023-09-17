@@ -7,20 +7,19 @@ import gestion.Zona;
 
 public class Reptil extends Animal {
 	private static List<Reptil> listado =new ArrayList<>();
-	public int iguanas;
-	public int serpientes;
+	public static int iguanas;
+	public  static int serpientes;
 	private String colorEscamas;
 	private int largoCola;
 	
 //constructor
 	
 	
-	public Reptil(String nombre,int edad, String habitat,String genero,Zona zona,String colorEscamas, int  largoCola) {
+	public Reptil(String nombre,int edad, String habitat,String genero ,String colorEscamas, int  largoCola) {
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
-		this.setZona(zona);
 		this.colorEscamas=colorEscamas;
 		this.largoCola=largoCola;
 		Reptil.listado.add(this);
@@ -62,14 +61,15 @@ public String movimiento() {
 	return "reptar";
 }
 	
-public void crearIguana(String nombre,int edad,String genero,Zona zona) {
-	new Reptil(nombre,edad, "humedal",genero,zona,"verde",3);
-	this.iguanas++;
+public static Animal crearIguana(String nombre,int edad,String genero ) {
+	Reptil.iguanas++;
+	return new Reptil(nombre,edad, "humedal",genero,"verde",3);
 	
 }
 
-public void crearSerpiente(String nombre,int edad,String genero,Zona zona){
-	new Reptil(nombre,edad, "jungla",genero,zona,"blanco",1);
+public  static Animal crearSerpiente(String nombre,int edad,String genero ){
+	Reptil.serpientes++;
+	return new Reptil(nombre,edad, "jungla",genero,"blanco",1);
 }
 	
 

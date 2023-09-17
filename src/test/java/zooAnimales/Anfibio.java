@@ -3,21 +3,19 @@ package zooAnimales;
 import java.util.ArrayList;
 import java.util.List;
 
-import gestion.Zona;
 
 public class Anfibio extends Animal {
 	private static List<Anfibio> listado= new ArrayList<>();
-	public int ranas;
-	public int salamandras;
+	public static int ranas;
+	public static int salamandras;
 	private String colorPiel;
 	private boolean venenoso;
 //	Constructor
-	public Anfibio(String nombre,int edad, String habitat,String genero,Zona zona, String colorPiel, boolean venenoso) {
+	public Anfibio(String nombre,int edad, String habitat,String genero, String colorPiel, boolean venenoso) {
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
-		this.setZona(zona);
 		this.colorPiel=colorPiel;
 		this.venenoso=venenoso;
 		Anfibio.listado.add(this);
@@ -121,14 +119,14 @@ public class Anfibio extends Animal {
 		return "saltar";
 	}
 	
-	public void crearRana(String nombre,int edad,String genero,Zona zona) {
-		new Anfibio(nombre,edad,"selva",genero,zona,"rojo",true);
-		this.ranas++;
+	public  static Animal crearRana(String nombre,int edad,String genero) {
+		Anfibio.ranas++;
+		return new Anfibio(nombre,edad,"selva",genero,"rojo",true);
 	}
 	
-	public void crearSalamandra(String nombre,int edad,String genero,Zona zona) {
-		new Anfibio(nombre,edad,"selva",genero,zona,"negro y amarillo",false);
-		this.salamandras++;
+	public  static Animal crearSalamandra(String nombre,int edad,String genero) {
+		Anfibio.salamandras++;
+		return new Anfibio(nombre,edad,"selva",genero,"negro y amarillo",false);
 	}
 
 }
