@@ -26,7 +26,9 @@ public class Pez extends Animal{
 		
 	}
 	
-	public  Pez() {}
+	public  Pez() {
+		Pez.listado.add(this);
+	}
 	
 	
 	

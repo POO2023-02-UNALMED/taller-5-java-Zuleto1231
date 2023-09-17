@@ -22,7 +22,9 @@ public class Ave extends Animal{
 		Ave.listado.add(this);
 	}
 	
-	public Ave() {}
+	public Ave() {
+		Ave.listado.add(this);
+	}
 	
 
 	

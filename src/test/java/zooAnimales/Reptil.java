@@ -25,7 +25,9 @@ public class Reptil extends Animal {
 		Reptil.listado.add(this);
 	}
 	
-	public Reptil() {}
+	public Reptil() {
+		Reptil.listado.add(this);
+	}
 	
 	
 	

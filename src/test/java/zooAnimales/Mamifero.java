@@ -24,7 +24,10 @@ public Mamifero(String nombre,int edad, String habitat,String genero, boolean pe
 	Mamifero.listado.add(this);
 }
 
-public Mamifero() {}
+public Mamifero() {
+	Mamifero.listado.add(this);
+	
+}
 
 
 
