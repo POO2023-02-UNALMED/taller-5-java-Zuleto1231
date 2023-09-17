@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Zoologico {
 	private String nombre;
 	private String ubicacion;
-	private List<Zona> zonaList = new ArrayList<Zona>();
+	private static List<Zona> zonaList = new ArrayList<Zona>();
 
 //	Constructor 
 	public Zoologico(String nombre, String ubicacion) {
@@ -36,12 +36,12 @@ public class Zoologico {
 		return zonaList;
 	}
 	public void setZona(List<Zona> zonaList) {
-		this.zonaList = zonaList;
+		Zoologico.zonaList = zonaList;
 	}
 	
 	
 	public void agregarZonas(Zona zona) {
-		this.zonaList.add(zona);
+		Zoologico.zonaList.add(zona);
 	}
 	
 	public int cantidadTotalAnimales() {

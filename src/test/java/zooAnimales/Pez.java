@@ -59,7 +59,7 @@ public class Pez extends Animal{
 	}
 	
 	public String movimiento() {
-return "Nadar";
+return "nadar";
 	}
 	
 	public static Animal crearSalmon(String nombre,int edad,String genero ) {
