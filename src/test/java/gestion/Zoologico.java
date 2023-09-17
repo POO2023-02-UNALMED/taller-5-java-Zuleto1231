@@ -8,10 +8,9 @@ public class Zoologico {
 	private List<Zona> zonaList = new ArrayList<Zona>();
 
 //	Constructor 
-	public Zoologico(String nombre, String ubicacion,  List<Zona> zonaList) {
+	public Zoologico(String nombre, String ubicacion) {
 		this.nombre=nombre;
 		this.ubicacion=ubicacion;
-		this.zonaList=zonaList;
 	}
 //	Constructor vacio
 	public Zoologico() {}
@@ -39,6 +38,8 @@ public class Zoologico {
 	public void setZona(List<Zona> zonaList) {
 		this.zonaList = zonaList;
 	}
+	
+	
 	public void agregarZonas(Zona zona) {
 		this.zonaList.add(zona);
 	}
